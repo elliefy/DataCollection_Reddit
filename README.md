@@ -1,6 +1,6 @@
 Web scraping package - rvest
 ----------------
-This GitHub repository contains data, code and refereces materials related to R package `RedditExtractoR`. 
+This GitHub repository contains data, code and refereces materials related to R package [`RedditExtractoR`] (https://cran.r-project.org/web/packages/RedditExtractoR/RedditExtractoR.pdf)
 
 The `RedditExtractoR` is to scrape Reddit data. We are going to exemplify how to use this package to pull out Reddit data and output a dataframe.
 
