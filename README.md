@@ -21,17 +21,17 @@ search_list = list("opioid", "heroin", "hydrocodone", "vicodin", "codeine", "mor
 Create the search list
 ----------------
 <pre class="r"><code>for (item in search_list)
-{dict[[item]] = get_reddit(search_terms = item)}</code></pre>
+{dict[[item]] = get_reddit(search_terms = item, page_threshold = 1,
+  cn_threshold = 2500)}</code></pre>
 
-Scrape text from the html code
+Get the Reddit
 ----------------
 <p>First, let’s create a function to scrape text from The Hill</p>
-<pre class="r"><code>textScraper <- function(x) {
-  as.character(html_text(html_nodes (x, ".content-wrapper") %>% html_nodes("p"))) %>%
-    str_replace_all("[\n]", "") %>%
-    str_replace_all("    ", "") %>%
-    str_replace_all("[\t]", "") %>%
-    paste(collapse = '')}</code></pre>
+<pre class="r"><code>getcontent <- get_reddit(
+  search_terms = "Tolkien",
+  page_threshold = 1,
+  cn_threshold = 2500
+)</code></pre>
     
 Apply this function to our html content
 ----------------
